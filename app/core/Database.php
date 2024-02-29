@@ -10,28 +10,28 @@ class Database
     private $dbh;
     private $stmt;
 
-    public function __construct(){
-        //DATA SOURCE NAME
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
+    public function __construct()
+    {
+        //Data Source Name
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->database;
 
-        $option = [
-            PDO::ATTR_PERSISTENT => true, 
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        ];
         try {
-            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass);
         } catch (PDOException $e) {
             die($e->getMessage());
         }
     }
-    public function query($query){
-        $this->stmt = $this->dbh->prepare($query);
+
+    public function query($sql){
+        $this->stmt = $this->dbh->prepare($sql);
     }
-    public function  bind($param, $value, $type = null){
+
+    public function bind($param, $value, $type = null)
+    {
         if (is_null($type)) {
             switch (true) {
                 case is_int($value):
-                    $type = PDO::PARAM_INT;
+                    $type = PDO ::PARAM_INT;
                     break;
                 case is_bool($value):
                     $type = PDO::PARAM_BOOL;
@@ -45,20 +45,24 @@ class Database
         }
         $this->stmt->bindValue($param, $value, $type);
     }
+
     public function execute(){
         $this->stmt->execute();
     }
 
-    public function resultSet(){
+    public function resultSet()
+    {
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     public function single(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
+
     public function rowCount(){
-        return $this->stmt->rowCount();
+        return $this->$stmt->rowCount();
     }
 }

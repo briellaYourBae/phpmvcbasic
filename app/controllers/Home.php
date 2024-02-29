@@ -2,7 +2,10 @@
 
 class Home extends Controller{
     public function index() {
-        echo "its a home";
-        //$this->view('home/index');
+        $data['judul'] = 'Daftar Mahasiswa';
+        $data['mhs'] = $this->model('Mahasiswa_Model')->getAllMahasiswa();
+        $this->view('templates/header', $data);
+        $this->view('mahasiswa/index', $data);
+        $this->view('templates/footer');
     }
 }
