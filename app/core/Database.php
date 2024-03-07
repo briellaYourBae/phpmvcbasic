@@ -47,7 +47,7 @@ class Database
     }
 
     public function execute(){
-        $this->stmt->();
+        $this->stmt->execute();
     }
 
     public function resultSet()
