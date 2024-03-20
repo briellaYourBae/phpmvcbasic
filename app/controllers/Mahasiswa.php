@@ -15,8 +15,16 @@
             $nrp = $_POST["nrp"];
 
             $data = $this->model("Mahasiswa_model")->createMahasiswa($nama, $nrp, $jurusan, $email);
-            
+            var_dump($data);
+            if(!$data){
+                Flasher::setFlash("Create User","Sukses","Post");
+                header('http://localhost/basicmvc/public/');
+            }else{
+                Flasher::setFlash("Create  User","ERROR","POST");
+                header('Location: http://localhost/basicmvc/public');
+            }
+
             // DUM($nama);    
-            header("Location: http://localhost/basicmvc/public/");
+            //header("Location: http://localhost/basicmvc/public/");
         }
     }

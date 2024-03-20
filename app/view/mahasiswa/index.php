@@ -2,7 +2,7 @@
     <div class="row mb-3">
         <div class="col-lg-6">
             <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
-                Tambah Data Mahasiswa
+               <a href="">Tambah Data Mahasiswa</a> 
             </button>
         </div>
     </div>
