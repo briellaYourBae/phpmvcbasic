@@ -1,4 +1,4 @@
-<script src="<?= BASEURL; ?>/js/bootstrap.js"</script
-<script src="<?= BASEURL; ?>/js/script.js"</script
-</body
-</html
+<script src="http://localhost/basicmvc/public/js/bootstrap.min.js"></script>
+</body>
+
+</html>

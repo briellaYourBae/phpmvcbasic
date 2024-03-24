@@ -1,8 +1,7 @@
 <?php
+ define('BASEURL','http://localhost/basicmvc/public');
 
-define('BASEURL','http://localhost/basicmvc/public/');
-define('BASEIMG','http://localhost/basicmvc/public/image/');
-
+//  DB
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASS','');
