@@ -22,13 +22,22 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">Email:</label>
-                                    <input type="text" name="email" class="form-control" id="recipient-name">
+                                    <input type="text" name="email" class="form-control" id="recipient-name" placeholder="nick@example.com">
                                 </div>
+                                <!--<div class="mb-3">
+                                     <label for="recipient-name" class="col-form-label">Jurusan:</label>
+                                    <input type="text" name="jurusan" class="form-control" id="recipient-name">
+                                    </div> -->
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">Jurusan:</label>
-                                    <input type="text" name="jurusan" class="form-control" id="recipient-name">
+                                    <select class="form-control" name="jurusan" id="jurusan">
+                                    <option value="Teknik Mesin">Teknik Mesin</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="Teknik Industri">Teknik Industri</option>
+                                    <option value="Teknik Pangan">Teknik Pangan</option>
+                                    </select>
+                                    <!-- <input type="text" name="jurusan" class="form-control" id="recipient-name" placeholder="nother"> -->
                                 </div>
-
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -51,11 +60,11 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>nrp</th>
-                    <th>jurusan</th>
-                    <th>action</th>
+                    <th>ID</th>
+                    <th>NAMA</th>
+                    <th>NRP</th>
+                    <th>JURUSAN</th>
+                    <th>ACT</th>
                 </tr>
             </thead>
             <tbody>

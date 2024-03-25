@@ -25,4 +25,19 @@ class Home extends Controller
             header("Location: http://localhost/basicmvc/public");
         }
     }
+    public function createMhs(){
+        if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0 ){
+            Flasher::setFlash('Berhasil', 'Ditambahkan', 'Success');
+            header('Location: ' . BASEURL . '/mahasiswa');
+        } else{
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        }
+    }
+    public function delete($id){
+        if($this->model('Mahasiswa_model')->hapusDataMahasiswa($id) > 0 ){
+
+        }
+    }
 }
