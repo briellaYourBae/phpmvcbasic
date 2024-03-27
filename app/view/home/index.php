@@ -31,12 +31,12 @@
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">Jurusan:</label>
                                     <select class="form-control" name="jurusan" id="jurusan">
-                                    <option value="Teknik Mesin">Teknik Mesin</option>
-                                    <option value="Teknik Informatika">Teknik Informatika</option>
-                                    <option value="Teknik Industri">Teknik Industri</option>
-                                    <option value="Teknik Pangan">Teknik Pangan</option>
+                                    <option value="AKL">AKL</option>
+                                    <option value="PPLG">PPLG</option>
+                                    <option value="TJKT">TJKT</option>
+                                    <option value="BENGKEL">BENGKEL</option>
                                     </select>
-                                    <!-- <input type="text" name="jurusan" class="form-control" id="recipient-name" placeholder="nother"> -->
+                                    <input type="text" name="jurusan" class="form-control" id="recipient-name" placeholder="nother">
                                 </div>
                             </div>
                             <div class="modal-footer">
